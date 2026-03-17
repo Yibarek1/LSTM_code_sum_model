@@ -27,6 +27,6 @@ source venv/bin/activate
 Once the above is done you can run the `LSTM_pipeline.ipynb` file top-to-bottom (Unless skipping the mining process). The notebook will mine public Github repos, load the `.pt` files, train the LSTM with early stopping based on Validation BLEU-1, and evaluate the final test set.
 
 ## Where Outputs are Written
-* **Embeddings:** The `.pt` files containing token IDs and the embedding matrix are saved in the root directory alongside the `.txt` files.
+* **Embeddings:** The `.pt` files containing token IDs and the embedding matrix are saved in the `pt_files/` directory alongside the `.txt` files.
 * **Model Checkpoints:** The best-performing model weights (saved via the early stopping mechanism) are written to the `checkpoints/` directory (e.g., `checkpoints/lstm_summarization_model.pt`).
-* **Predictions and Evaluation:** The final generated textual predictions and the computed metrics (BLEU-1,2,3,4, METEOR, BERTScore, and SIDE) are output directly within the final cells of the Jupyter Notebook.
+* **Predictions and Evaluation:** The final generated textual predictions and the computed metrics (BLEU-1,2,3,4, METEOR, BERTScore, and SIDE) are output directly within the final cells of the Jupyter Notebook. A json file of the outcomes of the test predictions can be found in the root of the folder.
